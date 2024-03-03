@@ -28,22 +28,10 @@ function setup() {
         for (let column = 0; column < cellNumber; column++) {
             noStroke() 
             fill(random(colours))
-            const xPosition = row * cellSize
-            const yPosition = column * cellSize
+            const xPosition = column * cellSize
+            const yPosition = row * cellSize
             square(xPosition, yPosition, cellSize)
         }
     }
 }
 
-// for each row OR column, draw less squares
-
-// cell number needs to exponentially decrease, but with random distribution
-
-// OR add more white squares for each row. for each row, add more white to the array
-
-// setting a variable for the random colour from the array doesn't work because a single random colour is chosen only once
-// the random colour is chosen by the variable once, not chosen every time a square is drawn in the for loop
-
-// make there be an INCREASINGLY weighted probability of drawing a white square
-
-// check the row number. if the row number has gone up, make it more likely that the square will be white
